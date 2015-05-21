@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v52-gT-sgm">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="EfM-Y7-6dm">
+            <objects>
+                <navigationController id="v52-gT-sgm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xq9-c6-5W5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="11g-Jk-9x2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDQ-4o-1k2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-503" y="330"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEl-8v-pXe">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPushGameStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z3M-tY-WoE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jEl-8v-pXe" secondAttribute="centerX" id="YFg-yz-0rM"/>
+                            <constraint firstAttribute="centerY" secondItem="jEl-8v-pXe" secondAttribute="centerY" id="u4u-e1-a9p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DX1-GH-zhK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189" y="330"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="KU3-KY-cHs">
+            <objects>
+                <viewController restorationIdentifier="QuizVC" storyboardIdentifier="QuizVC" id="NDS-Wo-Ul1" customClass="QuizViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="acS-Bp-MQo"/>
+                        <viewControllerLayoutGuide type="bottom" id="XwU-Ri-vSb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mzK-9M-tiL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTs-on-uZa">
+                                <rect key="frame" x="277" y="302" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPushSelectedButton:" destination="NDS-Wo-Ul1" eventType="touchUpInside" id="C7P-im-Mft"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第一問" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVD-2k-KLk">
+                                <rect key="frame" x="16" y="44" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お酒に関する言葉で「おにぎす」といえば焼酎のことですが、「にがぎす」といえば何？" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2b-06-jeL">
+                                <rect key="frame" x="16" y="73" width="568" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="ihj-0p-0L6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R2b-06-jeL" firstAttribute="trailing" secondItem="mzK-9M-tiL" secondAttribute="trailingMargin" id="4bS-OC-HVv"/>
+                            <constraint firstItem="R2b-06-jeL" firstAttribute="top" secondItem="lVD-2k-KLk" secondAttribute="bottom" constant="8" id="9je-X8-ubN"/>
+                            <constraint firstItem="R2b-06-jeL" firstAttribute="trailing" secondItem="mzK-9M-tiL" secondAttribute="trailingMargin" id="LHf-7l-Mwm"/>
+                            <constraint firstItem="lVD-2k-KLk" firstAttribute="trailing" secondItem="mzK-9M-tiL" secondAttribute="trailingMargin" id="PIY-m6-t5C"/>
+                            <constraint firstItem="R2b-06-jeL" firstAttribute="top" secondItem="lVD-2k-KLk" secondAttribute="top" constant="29" id="Put-E8-bRP"/>
+                            <constraint firstItem="lVD-2k-KLk" firstAttribute="leading" secondItem="mzK-9M-tiL" secondAttribute="leadingMargin" id="W2q-iu-9cP"/>
+                            <constraint firstItem="R2b-06-jeL" firstAttribute="leading" secondItem="lVD-2k-KLk" secondAttribute="leading" id="Z7O-Qd-bFY"/>
+                            <constraint firstItem="uTs-on-uZa" firstAttribute="top" secondItem="R2b-06-jeL" secondAttribute="bottom" constant="64" id="Zxr-VI-8vY"/>
+                            <constraint firstAttribute="centerX" secondItem="R2b-06-jeL" secondAttribute="centerX" id="c1h-z7-EoI"/>
+                            <constraint firstAttribute="centerX" secondItem="uTs-on-uZa" secondAttribute="centerX" id="hVY-Fv-PpO"/>
+                            <constraint firstItem="lVD-2k-KLk" firstAttribute="top" secondItem="acS-Bp-MQo" secondAttribute="bottom" constant="24" id="wvF-i1-Yo4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LHf-7l-Mwm"/>
+                                <exclude reference="Put-E8-bRP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="choiceButton" destination="uTs-on-uZa" id="3FM-8a-P4N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4L-jd-YTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="330"/>
+        </scene>
+    </scenes>
+</document>
