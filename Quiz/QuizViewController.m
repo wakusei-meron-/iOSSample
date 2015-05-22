@@ -7,8 +7,13 @@
 //
 
 #import "QuizViewController.h"
+#import "QuizView.h"
+#import "FileHandler.h"
 
-@interface QuizViewController ()
+@interface QuizViewController () {
+    
+    NSArray *quizList;
+}
 @property (weak, nonatomic) IBOutlet UIButton *choiceButton;
 
 - (IBAction)didPushSelectedButton:(UIButton *)sender;
@@ -18,6 +23,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    QuizView *quizView = [QuizView view];
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"question" ofType:@"txt"];
+    quizList = [FileHandler fetchQuizzesFromTextFile:filePath];
+    
+    [quizView showQuizText:[quizList objectAtIndex:1]];
+    self.view = quizView;
+    
+    
 }
 
 - (void)viewDidLayoutSubviews {

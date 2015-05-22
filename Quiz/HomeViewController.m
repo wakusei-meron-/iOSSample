@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "QuizViewController.h"
+#import "Quiz-Swift.h"
 
 @interface HomeViewController ()
 
