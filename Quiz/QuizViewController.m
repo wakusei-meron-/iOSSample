@@ -9,42 +9,110 @@
 #import "QuizViewController.h"
 #import "QuizView.h"
 #import "FileHandler.h"
+#import "ExplanationTabBarViewController.h"
+#import "ExplanationViewController.h"
 
 @interface QuizViewController () {
     
+    int currentQuizIndex;
+    int correctQuizCount;
     NSArray *quizList;
+    QuizView *quizView;
+    
 }
 @property (weak, nonatomic) IBOutlet UIButton *choiceButton;
 
-- (IBAction)didPushSelectedButton:(UIButton *)sender;
 @end
 
 @implementation QuizViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    QuizView *quizView = [QuizView view];
+    
+    quizView = [QuizView view];
+    quizView.delegate = self;
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"question" ofType:@"txt"];
     quizList = [FileHandler fetchQuizzesFromTextFile:filePath];
-    
-    [quizView showQuizText:[quizList objectAtIndex:1]];
+    currentQuizIndex = 0;
+    correctQuizCount = 0;
+    [quizView setupQuizText:[quizList objectAtIndex:currentQuizIndex]];
     self.view = quizView;
-    
-    
 }
 
-- (void)viewDidLayoutSubviews {
+#pragma mark - QuizViewDelegate
+
+- (void)didPushedChoiceButton:(QuizChoiceButton *)button {
+
+    Quiz *currentQuiz = [quizList objectAtIndex:currentQuizIndex];
+    NSLog(@"%@, %@", button.titleLabel.text, currentQuiz.answer);
+    if ([button.titleLabel.text isEqual:currentQuiz.answer]) {
+        
+        NSLog(@"正解");
+        correctQuizCount++;
+    }else {
+        NSLog(@"不正解");
+    }
     
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [btn setTitle:@"hello" forState:UIControlStateNormal];
-    CGRect frame = self.choiceButton.frame;
-    NSLog(@"%@", NSStringFromCGRect(frame));
-    frame.origin.y += 100;
-    btn.frame = frame;
-    [self.view addSubview:btn];
+    if (currentQuizIndex < (quizList.count - 1)) {
+        
+        currentQuizIndex++;
+        Quiz *aQuiz = [quizList objectAtIndex:currentQuizIndex];
+        NSLog(@"%@", aQuiz.quizText);
+        [quizView setupQuizText:aQuiz];
+    }else {
+        
+        NSString *msg = [NSString stringWithFormat:@"%lu問中、%d問正解したので、正答率は%.1fです", quizList.count, correctQuizCount, correctQuizCount / (double)quizList.count];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"正答率" message:msg preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"TOPに戻る" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            [self.navigationController popViewControllerAnimated:YES];
+        }]];
+        
+        [alert addAction:[UIAlertAction actionWithTitle:@"解説を見る" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+//            [self.navigationController popViewControllerAnimated:NO];
+            
+            ExplanationTabBarViewController *etvc = [[ExplanationTabBarViewController alloc] init];//[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ExplanationTVC"];
+            
+
+            NSMutableArray *viewControllers = [NSMutableArray array];
+            
+            for (Quiz *quiz in quizList) {
+                
+                NSLog(@"iii");
+                ExplanationViewController *evc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ExplanationVC"];
+                evc.quiz = quiz;
+                [viewControllers addObject:evc];
+                evc.title = [NSString stringWithFormat:@"第%ld問", viewControllers.count];
+            }
+            etvc.viewControllers = viewControllers;
+    
+            [self.navigationController pushViewController:etvc animated:YES];
+        }]];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
-- (IBAction)didPushSelectedButton:(id)sender {
-}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

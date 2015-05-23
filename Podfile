@@ -3,7 +3,8 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'Quiz' do
-pod 'MaterialKit'
+#pod 'MaterialKit'
+pod 'SwipeView', '1.3.2'
 end
 
 target 'QuizTests' do

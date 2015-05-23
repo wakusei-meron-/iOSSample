@@ -10,9 +10,10 @@
 
 @interface UIScreen(Util)
 
-- (CGRect)bounds;
-- (CGFloat)screenWidth;
-- (CGPoint)screenCenter;
++ (CGRect)bounds;
++ (CGFloat)screenWidth;
++ (CGFloat)screenHeight;
++ (CGPoint)screenCenter;
 
 
 @end

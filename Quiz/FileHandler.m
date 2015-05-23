@@ -39,10 +39,7 @@ const NSString *kChoicesKey = @"choices";
                        ];
         [quizList addObject:aQuiz];
     }
-
-
     
-
     return quizList;
 }
 

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuizView.h"
 
-@interface QuizViewController : UIViewController
+@interface QuizViewController : UIViewController<QuizViewDelegate>
 
 @end

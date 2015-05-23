@@ -10,18 +10,25 @@
 
 @implementation UIScreen(Util)
 
-- (CGRect)bounds {
-
-    return CGRectZero;
-}
-- (CGFloat)screenWidth {
-    
-    return 0;
++ (CGRect)bounds {
+//    NSLog(@"%@", NSStringFromCGRect([UIScreen mainScreen].bounds));
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    return screenRect;
 }
 
-- (CGPoint)screenCenter {
++ (CGFloat)screenWidth {
+    return [self bounds].size.width;
+}
+
++ (CGFloat)screenHeight {
+    return [self bounds].size.height;
+}
+
++ (CGPoint)screenCenter {
     
-    return CGPointZero;
+    CGPoint center = CGPointMake([self bounds].size.width  / 2.0,
+                                 [self bounds].size.height / 2.0);
+    return center;
 }
 
 @end

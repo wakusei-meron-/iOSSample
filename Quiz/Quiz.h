@@ -15,9 +15,9 @@
          explanation:(NSString *)explanation
              choices:(NSArray *)choices;
 
-@property(nonatomic, weak) NSString *quizText;
-@property(nonatomic, weak) NSString *answer;
-@property(nonatomic, weak) NSString *explanation;
-@property(nonatomic, weak) NSArray  *choices;
+@property(nonatomic, strong) NSString *quizText;
+@property(nonatomic, strong) NSString *answer;
+@property(nonatomic, strong) NSString *explanation;
+@property(nonatomic, strong) NSArray  *choices;
 
 @end
