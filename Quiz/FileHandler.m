@@ -16,7 +16,7 @@ const NSString *kAnswerKey = @"answer";
 const NSString *kExplanationKey = @"commentary";
 const NSString *kChoicesKey = @"choices";
 
-+ (NSArray *)fetchQuizzesFromTextFile:(NSString *)filePath {
++ (NSArray *)fetchQuizzesFromJsonFile:(NSString *)filePath {
     
     NSError *error;
     NSString *jsonString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];

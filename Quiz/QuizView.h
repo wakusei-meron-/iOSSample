@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Quiz.h"
-#import "QuizChoiceButton.h"
+//#import "QuizChoiceButton.h"
 
 @protocol QuizViewDelegate;
 
@@ -26,6 +26,6 @@
 
 @protocol QuizViewDelegate <NSObject>
 
-- (void)didPushedChoiceButton:(QuizChoiceButton *)button;
+- (void)didPushedChoiceButton:(UIButton *)button;
 
 @end

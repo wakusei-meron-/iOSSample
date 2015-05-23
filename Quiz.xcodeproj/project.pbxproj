@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3762B5E41B0ECC6500236190 /* QuizChoiceButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3762B5E31B0ECC6500236190 /* QuizChoiceButton.m */; };
-		3762B5E71B0F09C900236190 /* ExplanationTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3762B5E61B0F09C900236190 /* ExplanationTabBarViewController.m */; };
 		3762B5F01B103FC000236190 /* ExplanationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3762B5EE1B103FC000236190 /* ExplanationViewController.m */; };
+		3762B5F41B104C8D00236190 /* QuizManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3762B5F31B104C8D00236190 /* QuizManager.m */; };
+		3762B5FA1B10AB0000236190 /* UIStoryboard+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 3762B5F91B10AB0000236190 /* UIStoryboard+Util.m */; };
 		708E18121B0D990A00C24A52 /* QuizView.m in Sources */ = {isa = PBXBuildFile; fileRef = 708E18111B0D990A00C24A52 /* QuizView.m */; };
 		708E18141B0D9A1800C24A52 /* QuizView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 708E18131B0D9A1800C24A52 /* QuizView.xib */; };
 		708E18541B0DA90B00C24A52 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 708E18531B0DA90B00C24A52 /* Quiz.m */; };
-		708E18561B0DA95000C24A52 /* question.txt in Resources */ = {isa = PBXBuildFile; fileRef = 708E18551B0DA95000C24A52 /* question.txt */; };
+		708E18561B0DA95000C24A52 /* question.json in Resources */ = {isa = PBXBuildFile; fileRef = 708E18551B0DA95000C24A52 /* question.json */; };
 		708E185D1B0DAC2800C24A52 /* FileHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 708E185C1B0DAC2800C24A52 /* FileHandler.m */; };
 		708E18C91B0EC5AE00C24A52 /* UIScreen+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 708E18C81B0EC5AE00C24A52 /* UIScreen+Util.m */; };
 		70E86FAB1B0C515C00E49792 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E86FAA1B0C515C00E49792 /* main.m */; };
@@ -39,18 +39,18 @@
 
 /* Begin PBXFileReference section */
 		098E1CF5AA557900C02A4E43 /* Pods_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3762B5E21B0ECC6500236190 /* QuizChoiceButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizChoiceButton.h; sourceTree = "<group>"; };
-		3762B5E31B0ECC6500236190 /* QuizChoiceButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizChoiceButton.m; sourceTree = "<group>"; };
-		3762B5E51B0F09C900236190 /* ExplanationTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplanationTabBarViewController.h; sourceTree = "<group>"; };
-		3762B5E61B0F09C900236190 /* ExplanationTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplanationTabBarViewController.m; sourceTree = "<group>"; };
 		3762B5ED1B103FC000236190 /* ExplanationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplanationViewController.h; sourceTree = "<group>"; };
 		3762B5EE1B103FC000236190 /* ExplanationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplanationViewController.m; sourceTree = "<group>"; };
+		3762B5F21B104C8D00236190 /* QuizManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizManager.h; sourceTree = "<group>"; };
+		3762B5F31B104C8D00236190 /* QuizManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizManager.m; sourceTree = "<group>"; };
+		3762B5F81B10AB0000236190 /* UIStoryboard+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Util.h"; sourceTree = "<group>"; };
+		3762B5F91B10AB0000236190 /* UIStoryboard+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Util.m"; sourceTree = "<group>"; };
 		708E18101B0D990A00C24A52 /* QuizView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizView.h; sourceTree = "<group>"; };
 		708E18111B0D990A00C24A52 /* QuizView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizView.m; sourceTree = "<group>"; };
 		708E18131B0D9A1800C24A52 /* QuizView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizView.xib; sourceTree = "<group>"; };
 		708E18521B0DA90B00C24A52 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
 		708E18531B0DA90B00C24A52 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
-		708E18551B0DA95000C24A52 /* question.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = question.txt; sourceTree = "<group>"; };
+		708E18551B0DA95000C24A52 /* question.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = question.json; sourceTree = "<group>"; };
 		708E185B1B0DAC2800C24A52 /* FileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHandler.h; sourceTree = "<group>"; };
 		708E185C1B0DAC2800C24A52 /* FileHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHandler.m; sourceTree = "<group>"; };
 		708E18C71B0EC5AE00C24A52 /* UIScreen+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Util.h"; sourceTree = "<group>"; };
@@ -117,8 +117,6 @@
 				70E86FD21B0C585300E49792 /* HomeViewController.m */,
 				70E86FCE1B0C520500E49792 /* QuizViewController.h */,
 				70E86FCF1B0C520500E49792 /* QuizViewController.m */,
-				3762B5E51B0F09C900236190 /* ExplanationTabBarViewController.h */,
-				3762B5E61B0F09C900236190 /* ExplanationTabBarViewController.m */,
 				3762B5ED1B103FC000236190 /* ExplanationViewController.h */,
 				3762B5EE1B103FC000236190 /* ExplanationViewController.m */,
 			);
@@ -131,8 +129,6 @@
 				708E18101B0D990A00C24A52 /* QuizView.h */,
 				708E18111B0D990A00C24A52 /* QuizView.m */,
 				708E18131B0D9A1800C24A52 /* QuizView.xib */,
-				3762B5E21B0ECC6500236190 /* QuizChoiceButton.h */,
-				3762B5E31B0ECC6500236190 /* QuizChoiceButton.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -142,6 +138,8 @@
 			children = (
 				708E18521B0DA90B00C24A52 /* Quiz.h */,
 				708E18531B0DA90B00C24A52 /* Quiz.m */,
+				3762B5F21B104C8D00236190 /* QuizManager.h */,
+				3762B5F31B104C8D00236190 /* QuizManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -165,7 +163,7 @@
 		708E185A1B0DAB2800C24A52 /* OtherFiles */ = {
 			isa = PBXGroup;
 			children = (
-				708E18551B0DA95000C24A52 /* question.txt */,
+				708E18551B0DA95000C24A52 /* question.json */,
 			);
 			name = OtherFiles;
 			sourceTree = "<group>";
@@ -175,6 +173,8 @@
 			children = (
 				708E18C71B0EC5AE00C24A52 /* UIScreen+Util.h */,
 				708E18C81B0EC5AE00C24A52 /* UIScreen+Util.m */,
+				3762B5F81B10AB0000236190 /* UIStoryboard+Util.h */,
+				3762B5F91B10AB0000236190 /* UIStoryboard+Util.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -331,7 +331,7 @@
 				70E86FB41B0C515C00E49792 /* Main.storyboard in Resources */,
 				708E18141B0D9A1800C24A52 /* QuizView.xib in Resources */,
 				70E86FB91B0C515C00E49792 /* LaunchScreen.xib in Resources */,
-				708E18561B0DA95000C24A52 /* question.txt in Resources */,
+				708E18561B0DA95000C24A52 /* question.json in Resources */,
 				70E86FB61B0C515C00E49792 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,14 +398,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3762B5F41B104C8D00236190 /* QuizManager.m in Sources */,
 				70E86FAE1B0C515C00E49792 /* AppDelegate.m in Sources */,
 				3762B5F01B103FC000236190 /* ExplanationViewController.m in Sources */,
-				3762B5E41B0ECC6500236190 /* QuizChoiceButton.m in Sources */,
 				708E18C91B0EC5AE00C24A52 /* UIScreen+Util.m in Sources */,
 				708E18121B0D990A00C24A52 /* QuizView.m in Sources */,
+				3762B5FA1B10AB0000236190 /* UIStoryboard+Util.m in Sources */,
 				70E86FAB1B0C515C00E49792 /* main.m in Sources */,
 				70E86FD31B0C585300E49792 /* HomeViewController.m in Sources */,
-				3762B5E71B0F09C900236190 /* ExplanationTabBarViewController.m in Sources */,
 				708E185D1B0DAC2800C24A52 /* FileHandler.m in Sources */,
 				708E18541B0DA90B00C24A52 /* Quiz.m in Sources */,
 				70E86FD01B0C520500E49792 /* QuizViewController.m in Sources */,

@@ -10,6 +10,6 @@
 
 @interface FileHandler : NSObject
 
-+ (NSArray *)fetchQuizzesFromTextFile:(NSString *)filePath;
++ (NSArray *)fetchQuizzesFromJsonFile:(NSString *)filePath;
 
 @end

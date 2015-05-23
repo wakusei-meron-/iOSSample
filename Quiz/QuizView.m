@@ -7,11 +7,10 @@
 //
 
 #import "QuizView.h"
-#import "QuizChoiceButton.h"
 
 @interface QuizView()
 {
-    NSMutableArray *choiceButtonList;
+    NSArray *choiceButtonList;
 }
 @property (weak, nonatomic) IBOutlet UIButton *choiceButton1;
 @property (weak, nonatomic) IBOutlet UIButton *choiceButton2;
@@ -34,25 +33,18 @@
     return self;
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
-
 - (void)drawRect:(CGRect)rect {
     
-//        choiceButtonList = [NSMutableArray array];
-//    for (int i=0; i<4; i++) {
-//        
-//        QuizChoiceButton *btn = [QuizChoiceButton buttonWithType:UIButtonTypeRoundedRect title:@"aueo"];
-//        CGRect btnFlame = self.choiceButton.frame;//btn.frame;
-//        btnFlame.origin.y += 50 * i;
-//        btn.frame = btnFlame;
-//        [self addSubview:btn];
-//        [btn addTarget:delegate action:@selector(didPushedChoiceButton:) forControlEvents:UIControlEventTouchUpInside];
-//        [choiceButtonList addObject:btn];
-//        [self.choiceButton removeFromSuperview];
-//    }
-//    
+    choiceButtonList = [NSArray arrayWithObjects: self.choiceButton1,
+                                                  self.choiceButton2,
+                                                  self.choiceButton3,
+                                                  self.choiceButton4,
+                        nil];
+    
+    for (UIButton *btn in choiceButtonList) {
+        [btn.layer setBorderWidth:1.0];
+        [btn.layer setCornerRadius:10.0];
+    }
 }
 
 + (instancetype)view {
@@ -62,34 +54,25 @@
 
 - (void)setupQuizText:(Quiz *)quiz {
  
+    [self drawRect:self.frame];
     self.quizLabel.text = quiz.quizText;
     
-    [self.choiceButton1 setTitle:[quiz.choices objectAtIndex:0] forState:UIControlStateNormal];
-    [self.choiceButton2 setTitle:[quiz.choices objectAtIndex:1] forState:UIControlStateNormal];
-    [self.choiceButton3 setTitle:[quiz.choices objectAtIndex:2] forState:UIControlStateNormal];
-    [self.choiceButton4 setTitle:[quiz.choices objectAtIndex:3] forState:UIControlStateNormal];
-//    for (int i=0 ;i<choiceButtonList.count ;i++) {
-//        NSString *choiceText = [quiz.choices objectAtIndex:i];
-//        QuizChoiceButton *btn = [choiceButtonList objectAtIndex:i];
-//        [btn setTitle:choiceText forState:UIControlStateNormal];
-//    }
-//    for (int i=0; i<quiz.choices.count; i++) {
-//        NSString *btnTitle = [quiz.choices objectAtIndex:i];
-//        QuizChoiceButton *btn = [QuizChoiceButton buttonWithType:UIButtonTypeRoundedRect title:btnTitle];
-//        CGRect btnFlame = self.choiceButton.frame;//btn.frame;
-//        btnFlame.origin.y += 50 * i;
-//        btn.frame = btnFlame;
-//        [self addSubview:btn];
-//        
-//        
-//        [btn addTarget:delegate action:@selector(didPushedChoiceButton:) forControlEvents:UIControlEventTouchUpInside];
-//        
-//        NSLog(@"%@", btnTitle);
-//    }
-}
-- (IBAction)didPushedChoiceButton:(UIButton *)sender {
+    for (int i=0; i<choiceButtonList.count; i++) {
+        [[choiceButtonList objectAtIndex:i] setTitle:[quiz.choices objectAtIndex:i] forState:UIControlStateNormal];
+    }
+//    [self.choiceButton1 setTitle:[quiz.choices objectAtIndex:0] forState:UIControlStateNormal];
+//    [self.choiceButton2 setTitle:[quiz.choices objectAtIndex:1] forState:UIControlStateNormal];
+//    [self.choiceButton3 setTitle:[quiz.choices objectAtIndex:2] forState:UIControlStateNormal];
+//    [self.choiceButton4 setTitle:[quiz.choices objectAtIndex:3] forState:UIControlStateNormal];
     
-    NSLog(@"push");
-    [self.delegate didPushedChoiceButton:(QuizChoiceButton *)sender];
+    for (int i=0 ;i<choiceButtonList.count ;i++) {
+        NSString *choiceText = [quiz.choices objectAtIndex:i];
+        UIButton *btn = [choiceButtonList objectAtIndex:i];
+        [btn setTitle:choiceText forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)didPushedChoiceButton:(UIButton *)sender {
+    [self.delegate didPushedChoiceButton:sender];
 }
 @end

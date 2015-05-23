@@ -21,15 +21,9 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)didPushGameStartButton:(id)sender {
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    QuizViewController *qvc = [storyboard instantiateViewControllerWithIdentifier:@"QuizVC"];
+    QuizViewController *qvc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"QuizVC"];
     [self.navigationController pushViewController:qvc animated:YES];
 }
 @end
