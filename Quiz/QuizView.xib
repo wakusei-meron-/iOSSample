@@ -12,7 +12,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="button1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYg-dY-P18">
-                    <rect key="frame" x="16" y="332" width="568" height="54"/>
+                    <rect key="frame" x="16" y="364" width="568" height="54"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -20,7 +20,7 @@
                         <action selector="didPushedChoiceButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="HnY-wX-3u6"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　　第一問" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezw-LI-Q8F">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezw-LI-Q8F" customClass="UIview">
                     <rect key="frame" x="0.0" y="64" width="600" height="54"/>
                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -28,13 +28,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お酒に関する言葉で「おにぎす」といえば焼酎のことですが、「にがぎす」といえば何？" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JZ-ac-76L">
-                    <rect key="frame" x="40" y="118" width="520" height="214"/>
+                    <rect key="frame" x="40" y="134" width="520" height="214"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="button3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnp-Rq-9R3">
-                    <rect key="frame" x="16" y="456" width="568" height="54"/>
+                    <rect key="frame" x="16" y="488" width="568" height="54"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -43,7 +44,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="button4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0c-nI-mmC">
-                    <rect key="frame" x="16" y="518" width="568" height="54"/>
+                    <rect key="frame" x="16" y="550" width="568" height="54"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -65,7 +66,7 @@
                     </variation>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="button2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDy-a8-q5V">
-                    <rect key="frame" x="16" y="394" width="568" height="54"/>
+                    <rect key="frame" x="16" y="426" width="568" height="54"/>
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -82,12 +83,12 @@
                 <constraint firstItem="jnp-Rq-9R3" firstAttribute="leading" secondItem="g8k-9j-b9S" secondAttribute="trailing" constant="16" id="4BV-Tf-Shk"/>
                 <constraint firstAttribute="trailing" secondItem="k0c-nI-mmC" secondAttribute="trailing" constant="16" id="4bi-ee-Aa7"/>
                 <constraint firstItem="uYg-dY-P18" firstAttribute="top" secondItem="1JZ-ac-76L" secondAttribute="bottom" id="5y2-ew-rhZ"/>
-                <constraint firstItem="uYg-dY-P18" firstAttribute="top" secondItem="1JZ-ac-76L" secondAttribute="bottom" id="6hw-uT-aoY"/>
+                <constraint firstItem="uYg-dY-P18" firstAttribute="top" secondItem="1JZ-ac-76L" secondAttribute="bottom" constant="16" id="6hw-uT-aoY"/>
                 <constraint firstItem="k0c-nI-mmC" firstAttribute="top" secondItem="jnp-Rq-9R3" secondAttribute="bottom" constant="8" id="ExV-dc-60Q"/>
                 <constraint firstItem="g8k-9j-b9S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="FqG-gI-fcN"/>
                 <constraint firstAttribute="trailing" secondItem="JDy-a8-q5V" secondAttribute="trailing" constant="16" id="Gdu-he-SKw"/>
                 <constraint firstItem="JDy-a8-q5V" firstAttribute="leading" secondItem="g8k-9j-b9S" secondAttribute="trailing" constant="16" id="Hjn-FM-czd"/>
-                <constraint firstItem="1JZ-ac-76L" firstAttribute="top" secondItem="ezw-LI-Q8F" secondAttribute="bottom" id="Ki1-7k-h42"/>
+                <constraint firstItem="1JZ-ac-76L" firstAttribute="top" secondItem="ezw-LI-Q8F" secondAttribute="bottom" constant="16" id="Ki1-7k-h42"/>
                 <constraint firstAttribute="trailing" secondItem="uYg-dY-P18" secondAttribute="trailing" constant="16" id="Knk-yD-FQ6"/>
                 <constraint firstItem="uYg-dY-P18" firstAttribute="height" secondItem="g8k-9j-b9S" secondAttribute="height" multiplier="0.1" id="NCi-FA-KqL"/>
                 <constraint firstItem="1JZ-ac-76L" firstAttribute="leading" secondItem="g8k-9j-b9S" secondAttribute="trailing" constant="40" id="Qk9-yC-lRi"/>

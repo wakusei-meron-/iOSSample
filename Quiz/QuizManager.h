@@ -10,18 +10,20 @@
 #import "Quiz.h"
 
 @interface QuizManager : NSObject
-{
-    int correctQuizCount;
-}
-
-+ (QuizManager *)sharedManager;
 
 @property (nonatomic, strong) NSArray *quizList;
+
+/**
+ *  シングルトンのインスタンスの取得
+ */
++ (QuizManager *)sharedManager;
+
 
 /**
  *  currentQuizIndex, correctQuizCount, quizListの初期化
  */
 - (void)initQuizData;
+
 
 /**
  *  quizListの次の値が存在するかの判定
@@ -30,6 +32,7 @@
  */
 - (BOOL)hasNext;
 
+
 /**
  *  インデックスを１つ増やしQuizの取得
  *
@@ -37,12 +40,14 @@
  */
 - (Quiz *)getNextQuiz;
 
+
 /**
  *  現在のインデックスのQuizの取得
  *
  *  @return 現在のインデックスのQuiz
  */
 - (Quiz *)getCurrentQuiz;
+
 
 /**
  *  問題があっているかどうかの判定

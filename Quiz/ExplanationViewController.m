@@ -20,17 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
     self.indexLabel.text = self.title;
     [self setupLabelWithQuiz:self.quiz];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bgTile"]];
 }
 
 
 - (void)setupLabelWithQuiz:(Quiz *)quiz {
 
     self.quizTextLabel.text = quiz.quizText;
-    self.answerLabel.text = quiz.answer;
+    self.answerLabel.text = [NSString stringWithFormat:@"正解 : %@", quiz.answer];
     self.explanationLabel.text = quiz.explanation;
 }
 

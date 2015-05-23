@@ -27,7 +27,6 @@ static QuizManager *sharedManager = nil;
 
 - (void)initQuizData {
     currentQuizIndex = 0;
-    correctQuizCount = 0;
     self.quizList = [NSArray array];
 }
 
@@ -47,4 +46,5 @@ static QuizManager *sharedManager = nil;
 - (BOOL)judgementCorrectAnswer:(NSString *)selectedAnswer {
     return [selectedAnswer isEqualToString:[self getCurrentQuiz].answer];
 }
+
 @end

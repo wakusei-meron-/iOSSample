@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		3762B5F01B103FC000236190 /* ExplanationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3762B5EE1B103FC000236190 /* ExplanationViewController.m */; };
 		3762B5F41B104C8D00236190 /* QuizManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3762B5F31B104C8D00236190 /* QuizManager.m */; };
-		3762B5FA1B10AB0000236190 /* UIStoryboard+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 3762B5F91B10AB0000236190 /* UIStoryboard+Util.m */; };
+		3762B5FD1B10B95800236190 /* ExplanationTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3762B5FC1B10B95800236190 /* ExplanationTabViewController.m */; };
+		3762B6011B10BF6900236190 /* batu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3762B5FE1B10BF6900236190 /* batu.png */; };
+		3762B6021B10BF6900236190 /* maru.png in Resources */ = {isa = PBXBuildFile; fileRef = 3762B5FF1B10BF6900236190 /* maru.png */; };
+		3762B6031B10BF6900236190 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 3762B6001B10BF6900236190 /* title.png */; };
+		3762B6071B10C26500236190 /* bgTile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3762B6061B10C26500236190 /* bgTile.png */; };
 		708E18121B0D990A00C24A52 /* QuizView.m in Sources */ = {isa = PBXBuildFile; fileRef = 708E18111B0D990A00C24A52 /* QuizView.m */; };
 		708E18141B0D9A1800C24A52 /* QuizView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 708E18131B0D9A1800C24A52 /* QuizView.xib */; };
 		708E18541B0DA90B00C24A52 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 708E18531B0DA90B00C24A52 /* Quiz.m */; };
 		708E18561B0DA95000C24A52 /* question.json in Resources */ = {isa = PBXBuildFile; fileRef = 708E18551B0DA95000C24A52 /* question.json */; };
 		708E185D1B0DAC2800C24A52 /* FileHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 708E185C1B0DAC2800C24A52 /* FileHandler.m */; };
-		708E18C91B0EC5AE00C24A52 /* UIScreen+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 708E18C81B0EC5AE00C24A52 /* UIScreen+Util.m */; };
 		70E86FAB1B0C515C00E49792 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E86FAA1B0C515C00E49792 /* main.m */; };
 		70E86FAE1B0C515C00E49792 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E86FAD1B0C515C00E49792 /* AppDelegate.m */; };
 		70E86FB41B0C515C00E49792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E86FB21B0C515C00E49792 /* Main.storyboard */; };
@@ -43,8 +46,12 @@
 		3762B5EE1B103FC000236190 /* ExplanationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplanationViewController.m; sourceTree = "<group>"; };
 		3762B5F21B104C8D00236190 /* QuizManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizManager.h; sourceTree = "<group>"; };
 		3762B5F31B104C8D00236190 /* QuizManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizManager.m; sourceTree = "<group>"; };
-		3762B5F81B10AB0000236190 /* UIStoryboard+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Util.h"; sourceTree = "<group>"; };
-		3762B5F91B10AB0000236190 /* UIStoryboard+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Util.m"; sourceTree = "<group>"; };
+		3762B5FB1B10B95800236190 /* ExplanationTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplanationTabViewController.h; sourceTree = "<group>"; };
+		3762B5FC1B10B95800236190 /* ExplanationTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplanationTabViewController.m; sourceTree = "<group>"; };
+		3762B5FE1B10BF6900236190 /* batu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batu.png; sourceTree = "<group>"; };
+		3762B5FF1B10BF6900236190 /* maru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maru.png; sourceTree = "<group>"; };
+		3762B6001B10BF6900236190 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		3762B6061B10C26500236190 /* bgTile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgTile.png; sourceTree = "<group>"; };
 		708E18101B0D990A00C24A52 /* QuizView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizView.h; sourceTree = "<group>"; };
 		708E18111B0D990A00C24A52 /* QuizView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizView.m; sourceTree = "<group>"; };
 		708E18131B0D9A1800C24A52 /* QuizView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizView.xib; sourceTree = "<group>"; };
@@ -53,8 +60,6 @@
 		708E18551B0DA95000C24A52 /* question.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = question.json; sourceTree = "<group>"; };
 		708E185B1B0DAC2800C24A52 /* FileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHandler.h; sourceTree = "<group>"; };
 		708E185C1B0DAC2800C24A52 /* FileHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHandler.m; sourceTree = "<group>"; };
-		708E18C71B0EC5AE00C24A52 /* UIScreen+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Util.h"; sourceTree = "<group>"; };
-		708E18C81B0EC5AE00C24A52 /* UIScreen+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Util.m"; sourceTree = "<group>"; };
 		70E86FA51B0C515C00E49792 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E86FA91B0C515C00E49792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70E86FAA1B0C515C00E49792 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -117,6 +122,8 @@
 				70E86FD21B0C585300E49792 /* HomeViewController.m */,
 				70E86FCE1B0C520500E49792 /* QuizViewController.h */,
 				70E86FCF1B0C520500E49792 /* QuizViewController.m */,
+				3762B5FB1B10B95800236190 /* ExplanationTabViewController.h */,
+				3762B5FC1B10B95800236190 /* ExplanationTabViewController.m */,
 				3762B5ED1B103FC000236190 /* ExplanationViewController.h */,
 				3762B5EE1B103FC000236190 /* ExplanationViewController.m */,
 			);
@@ -129,6 +136,7 @@
 				708E18101B0D990A00C24A52 /* QuizView.h */,
 				708E18111B0D990A00C24A52 /* QuizView.m */,
 				708E18131B0D9A1800C24A52 /* QuizView.xib */,
+				70E86FB21B0C515C00E49792 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -138,8 +146,6 @@
 			children = (
 				708E18521B0DA90B00C24A52 /* Quiz.h */,
 				708E18531B0DA90B00C24A52 /* Quiz.m */,
-				3762B5F21B104C8D00236190 /* QuizManager.h */,
-				3762B5F31B104C8D00236190 /* QuizManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -147,7 +153,7 @@
 		708E18581B0DAB1E00C24A52 /* Static */ = {
 			isa = PBXGroup;
 			children = (
-				708E185A1B0DAB2800C24A52 /* OtherFiles */,
+				708E185A1B0DAB2800C24A52 /* jsonText */,
 				708E18591B0DAB2300C24A52 /* Images */,
 			);
 			name = Static;
@@ -156,27 +162,31 @@
 		708E18591B0DAB2300C24A52 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3762B6061B10C26500236190 /* bgTile.png */,
+				3762B5FE1B10BF6900236190 /* batu.png */,
+				3762B5FF1B10BF6900236190 /* maru.png */,
+				3762B6001B10BF6900236190 /* title.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
 		};
-		708E185A1B0DAB2800C24A52 /* OtherFiles */ = {
+		708E185A1B0DAB2800C24A52 /* jsonText */ = {
 			isa = PBXGroup;
 			children = (
 				708E18551B0DA95000C24A52 /* question.json */,
 			);
-			name = OtherFiles;
+			name = jsonText;
 			sourceTree = "<group>";
 		};
-		708E18C61B0EC59300C24A52 /* Category */ = {
+		708E18C61B0EC59300C24A52 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				708E18C71B0EC5AE00C24A52 /* UIScreen+Util.h */,
-				708E18C81B0EC5AE00C24A52 /* UIScreen+Util.m */,
-				3762B5F81B10AB0000236190 /* UIStoryboard+Util.h */,
-				3762B5F91B10AB0000236190 /* UIStoryboard+Util.m */,
+				3762B5F21B104C8D00236190 /* QuizManager.h */,
+				3762B5F31B104C8D00236190 /* QuizManager.m */,
+				708E185B1B0DAC2800C24A52 /* FileHandler.h */,
+				708E185C1B0DAC2800C24A52 /* FileHandler.m */,
 			);
-			name = Category;
+			name = Util;
 			sourceTree = "<group>";
 		};
 		70E86F9C1B0C515C00E49792 = {
@@ -202,19 +212,16 @@
 		70E86FA71B0C515C00E49792 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				708E18C61B0EC59300C24A52 /* Category */,
 				708E18581B0DAB1E00C24A52 /* Static */,
+				708E18C61B0EC59300C24A52 /* Util */,
 				708E18511B0DA8ED00C24A52 /* Model */,
 				708E18501B0DA8E300C24A52 /* View */,
 				708E184F1B0DA39C00C24A52 /* ViewController */,
 				70E86FAC1B0C515C00E49792 /* AppDelegate.h */,
 				70E86FAD1B0C515C00E49792 /* AppDelegate.m */,
-				70E86FB21B0C515C00E49792 /* Main.storyboard */,
-				70E86FB51B0C515C00E49792 /* Images.xcassets */,
 				70E86FB71B0C515C00E49792 /* LaunchScreen.xib */,
+				70E86FB51B0C515C00E49792 /* Images.xcassets */,
 				70E86FA81B0C515C00E49792 /* Supporting Files */,
-				708E185B1B0DAC2800C24A52 /* FileHandler.h */,
-				708E185C1B0DAC2800C24A52 /* FileHandler.m */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -329,10 +336,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E86FB41B0C515C00E49792 /* Main.storyboard in Resources */,
+				3762B6071B10C26500236190 /* bgTile.png in Resources */,
 				708E18141B0D9A1800C24A52 /* QuizView.xib in Resources */,
 				70E86FB91B0C515C00E49792 /* LaunchScreen.xib in Resources */,
 				708E18561B0DA95000C24A52 /* question.json in Resources */,
 				70E86FB61B0C515C00E49792 /* Images.xcassets in Resources */,
+				3762B6011B10BF6900236190 /* batu.png in Resources */,
+				3762B6031B10BF6900236190 /* title.png in Resources */,
+				3762B6021B10BF6900236190 /* maru.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,12 +409,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3762B5FD1B10B95800236190 /* ExplanationTabViewController.m in Sources */,
 				3762B5F41B104C8D00236190 /* QuizManager.m in Sources */,
 				70E86FAE1B0C515C00E49792 /* AppDelegate.m in Sources */,
 				3762B5F01B103FC000236190 /* ExplanationViewController.m in Sources */,
-				708E18C91B0EC5AE00C24A52 /* UIScreen+Util.m in Sources */,
 				708E18121B0D990A00C24A52 /* QuizView.m in Sources */,
-				3762B5FA1B10AB0000236190 /* UIStoryboard+Util.m in Sources */,
 				70E86FAB1B0C515C00E49792 /* main.m in Sources */,
 				70E86FD31B0C585300E49792 /* HomeViewController.m in Sources */,
 				708E185D1B0DAC2800C24A52 /* FileHandler.m in Sources */,

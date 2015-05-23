@@ -10,7 +10,7 @@
 #import "QuizView.h"
 #import "QuizManager.h"
 #import "FileHandler.h"
-#import "ExplanationViewController.h"
+#import "ExplanationTabViewController.h"
 #import "UIview+Toast.h"
 
 @interface QuizViewController () {
@@ -35,6 +35,7 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"question" ofType:@"json"];
     quizManager.quizList = [FileHandler fetchQuizzesFromJsonFile:filePath];
     
+    
     // ビューの準備
     quizView = [QuizView view];
     quizView.delegate = self;
@@ -45,7 +46,7 @@
 - (void)showResultAlertView {
     
     // 表示用メッセージ
-    NSString *msg = [NSString stringWithFormat:@"%ld問中、%d問正解したので、正答率は%.1fです", quizManager.quizList.count, correctQuizCount, correctQuizCount / (double)quizManager.quizList.count];
+    NSString *msg = [NSString stringWithFormat:@"%ld問中、%d問正解したので、正答率は%.1f％です", quizManager.quizList.count, correctQuizCount, (correctQuizCount / (double)quizManager.quizList.count) * 100];
     
     // アラートビューの作製
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"正答率" message:msg preferredStyle:UIAlertControllerStyleAlert];
@@ -55,23 +56,7 @@
     
     [alert addAction:[UIAlertAction actionWithTitle:@"解説を見る" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
         
-        UITabBarController *tabVC = [[UITabBarController alloc] init];
-        
-        // タブバーに表示するビューコントローラ−の作製
-        NSMutableArray *viewControllers = [NSMutableArray array];
-        for (Quiz *quiz in quizManager.quizList) {
-            
-            ExplanationViewController *evc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ExplanationVC"];
-            evc.quiz = quiz;
-            [viewControllers addObject:evc];
-            evc.title = [NSString stringWithFormat:@"第%ld問", viewControllers.count];
-        }
-        tabVC.viewControllers = viewControllers;
-        
-        // ナビゲーションバー戻るボタン
-        UIBarButtonItem *leftNavBarItem = [[UIBarButtonItem alloc] initWithTitle:@"TOPに戻る" style:UIBarButtonItemStylePlain target:self.navigationController action:@selector(popToRootViewControllerAnimated:)];
-        tabVC.navigationItem.leftBarButtonItem = leftNavBarItem;
-        
+        ExplanationTabViewController *tabVC = [[ExplanationTabViewController alloc] initWithQuizList:quizManager.quizList];
         [self.navigationController pushViewController:tabVC animated:YES];
     }]];
     
@@ -85,10 +70,10 @@
 
     if ([quizManager judgementCorrectAnswer:button.titleLabel.text]) {
         
-        [self.view makeToast:@"正解"];
+        [self.view makeToast:@"正解" duration:1.0f position:self.view image:[UIImage imageNamed:@"maru"]];
         correctQuizCount++;
     }else {
-        [self.view makeToast:@"不正解"];
+        [self.view makeToast:@"不正解" duration:1.0f position:self.view image:[UIImage imageNamed:@"batu"]];
     }
     
     [quizManager hasNext] ?

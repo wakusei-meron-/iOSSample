@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v52-gT-sgm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -33,19 +34,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEl-8v-pXe">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="270" y="285" width="60" height="30"/>
+                                <state key="normal" title="はじめる">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="didPushGameStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z3M-tY-WoE"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title.png" translatesAutoresizingMaskIntoConstraints="NO" id="ix1-sr-bVh">
+                                <rect key="frame" x="93" y="104" width="414" height="141"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ix1-sr-bVh" secondAttribute="centerX" id="LE3-oh-Xdw"/>
                             <constraint firstAttribute="centerX" secondItem="jEl-8v-pXe" secondAttribute="centerX" id="YFg-yz-0rM"/>
+                            <constraint firstItem="jEl-8v-pXe" firstAttribute="top" secondItem="ix1-sr-bVh" secondAttribute="bottom" constant="40" id="hty-AV-evR"/>
                             <constraint firstAttribute="centerY" secondItem="jEl-8v-pXe" secondAttribute="centerY" id="u4u-e1-a9p"/>
+                            <constraint firstItem="ix1-sr-bVh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="xlw-T5-3Eb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DX1-GH-zhK"/>
@@ -57,7 +64,7 @@
         <!--Quiz View Controller-->
         <scene sceneID="KU3-KY-cHs">
             <objects>
-                <viewController restorationIdentifier="QuizVC" storyboardIdentifier="QuizVC" id="NDS-Wo-Ul1" customClass="QuizViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizViewController" id="NDS-Wo-Ul1" customClass="QuizViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="acS-Bp-MQo"/>
                         <viewControllerLayoutGuide type="bottom" id="XwU-Ri-vSb"/>
@@ -75,7 +82,7 @@
         <!--Explanation View Controller-->
         <scene sceneID="h9a-yi-RhS">
             <objects>
-                <viewController restorationIdentifier="ExplanationVC" storyboardIdentifier="ExplanationVC" id="XhN-xu-4Al" customClass="ExplanationViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExplanationViewController" id="XhN-xu-4Al" customClass="ExplanationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bWz-aX-5lv"/>
                         <viewControllerLayoutGuide type="bottom" id="DUe-uz-5ar"/>
@@ -84,39 +91,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="第一問" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R93-ce-psU">
-                                <rect key="frame" x="16" y="55" width="51" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　　第一問" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R93-ce-psU">
+                                <rect key="frame" x="0.0" y="64" width="600" height="60"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="オニキスといえばなんちゃらかんチャラ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tns-pX-olG">
-                                <rect key="frame" x="16" y="119" width="568" height="144"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="オニキスといえばなんちゃらかんチャラ" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tns-pX-olG">
+                                <rect key="frame" x="40" y="124" width="520" height="150"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="答え：ビール" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8G-KV-58F">
-                                <rect key="frame" x="16" y="289" width="451" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答え：ビール" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8G-KV-58F">
+                                <rect key="frame" x="0.0" y="274" width="600" height="60"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="おにとは、ほにゃらか、きすとは本屋ラ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2h-Ww-HTe">
-                                <rect key="frame" x="16" y="351" width="568" height="124"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　　解説" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdN-ss-7j0">
+                                <rect key="frame" x="0.0" y="334" width="600" height="60"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="解説" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdN-ss-7j0">
-                                <rect key="frame" x="16" y="351" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vJ-pc-YPW" userLabel="DammyView">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="600"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" id="YoF-v2-xfv"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おにとは、ほにゃらか、きすとは本屋ラ" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2h-Ww-HTe">
+                                <rect key="frame" x="40" y="394" width="520" height="120"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="X8G-KV-58F" secondAttribute="trailing" id="0DV-FR-bme"/>
+                            <constraint firstItem="R93-ce-psU" firstAttribute="top" secondItem="bWz-aX-5lv" secondAttribute="bottom" id="2Cw-oH-xzb"/>
+                            <constraint firstItem="X8G-KV-58F" firstAttribute="leading" secondItem="6vJ-pc-YPW" secondAttribute="trailing" id="6qk-7N-dPA"/>
+                            <constraint firstItem="X8G-KV-58F" firstAttribute="height" secondItem="6vJ-pc-YPW" secondAttribute="height" multiplier="0.1" id="BCu-ya-Xzo"/>
+                            <constraint firstItem="PdN-ss-7j0" firstAttribute="leading" secondItem="6vJ-pc-YPW" secondAttribute="trailing" id="Cds-Mf-hu3"/>
+                            <constraint firstAttribute="trailing" secondItem="tns-pX-olG" secondAttribute="trailing" constant="40" id="F4F-Fy-d9T"/>
+                            <constraint firstItem="G2h-Ww-HTe" firstAttribute="top" secondItem="PdN-ss-7j0" secondAttribute="bottom" id="J4C-6B-2Sb"/>
+                            <constraint firstAttribute="trailing" secondItem="R93-ce-psU" secondAttribute="trailing" id="NoM-Fd-8pV"/>
+                            <constraint firstItem="tns-pX-olG" firstAttribute="top" secondItem="R93-ce-psU" secondAttribute="bottom" id="aru-hG-oYW"/>
+                            <constraint firstItem="tns-pX-olG" firstAttribute="leading" secondItem="6vJ-pc-YPW" secondAttribute="trailing" constant="40" id="bFW-Hr-hOe"/>
+                            <constraint firstAttribute="trailing" secondItem="G2h-Ww-HTe" secondAttribute="trailing" constant="40" id="dgg-y2-JES"/>
+                            <constraint firstItem="PdN-ss-7j0" firstAttribute="height" secondItem="6vJ-pc-YPW" secondAttribute="height" multiplier="0.1" id="dqL-h8-yv0"/>
+                            <constraint firstAttribute="trailing" secondItem="PdN-ss-7j0" secondAttribute="trailing" id="grj-AH-kON"/>
+                            <constraint firstItem="6vJ-pc-YPW" firstAttribute="top" secondItem="epq-cf-Piv" secondAttribute="top" id="hJp-SC-It9"/>
+                            <constraint firstItem="G2h-Ww-HTe" firstAttribute="height" secondItem="6vJ-pc-YPW" secondAttribute="height" multiplier="0.2" id="hOp-0x-RJ9"/>
+                            <constraint firstItem="PdN-ss-7j0" firstAttribute="top" secondItem="X8G-KV-58F" secondAttribute="bottom" id="k5g-dr-LOA"/>
+                            <constraint firstAttribute="bottom" secondItem="6vJ-pc-YPW" secondAttribute="bottom" id="m08-6Z-iPV"/>
+                            <constraint firstItem="R93-ce-psU" firstAttribute="height" secondItem="6vJ-pc-YPW" secondAttribute="height" multiplier="0.1" id="ocr-yY-xSI"/>
+                            <constraint firstItem="R93-ce-psU" firstAttribute="leading" secondItem="6vJ-pc-YPW" secondAttribute="trailing" id="p7c-RM-cLz"/>
+                            <constraint firstItem="6vJ-pc-YPW" firstAttribute="leading" secondItem="epq-cf-Piv" secondAttribute="leading" id="q2Y-dv-RsP"/>
+                            <constraint firstItem="tns-pX-olG" firstAttribute="height" secondItem="6vJ-pc-YPW" secondAttribute="height" multiplier="0.25" id="sLE-i8-9Pb"/>
+                            <constraint firstItem="X8G-KV-58F" firstAttribute="top" secondItem="tns-pX-olG" secondAttribute="bottom" id="ulx-F2-Fv9"/>
+                            <constraint firstItem="G2h-Ww-HTe" firstAttribute="leading" secondItem="6vJ-pc-YPW" secondAttribute="trailing" constant="40" id="zxh-Qy-AsY"/>
+                        </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="answerLabel" destination="X8G-KV-58F" id="Sdf-Er-dFz"/>
                         <outlet property="explanationLabel" destination="G2h-Ww-HTe" id="71f-Wb-qvL"/>
@@ -129,4 +171,7 @@
             <point key="canvasLocation" x="1526" y="330"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="title.png" width="414" height="220"/>
+    </resources>
 </document>

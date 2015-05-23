@@ -18,12 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bgTile"]];
 }
 
 - (IBAction)didPushGameStartButton:(id)sender {
-    
-    QuizViewController *qvc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"QuizVC"];
+    NSString *className = NSStringFromClass([QuizViewController class]);
+    QuizViewController *qvc = [self.storyboard instantiateViewControllerWithIdentifier:className];
     [self.navigationController pushViewController:qvc animated:YES];
 }
 @end

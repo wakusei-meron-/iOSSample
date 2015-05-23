@@ -10,5 +10,4 @@
 #import "QuizView.h"
 
 @interface QuizViewController : UIViewController<QuizViewDelegate>
-
 @end
