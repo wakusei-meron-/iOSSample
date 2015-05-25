@@ -10,6 +10,8 @@ $ pod install
 $ open Quiz.xcworkspace/ 
 ```
 
+Build and Run the application with Xcode.
+
 *If you couldn't use 'pod' commands, please execute below command.
 
 ```
